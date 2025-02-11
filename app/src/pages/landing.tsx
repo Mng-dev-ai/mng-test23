@@ -1,39 +1,46 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { TestimonialSection } from "@/components/testimonial-section"
+import { AIFeaturesSection } from "@/components/ai-features"
 import { 
   Rocket, 
   Zap, 
   Shield, 
   ArrowRight 
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16 lg:py-24">
+    <div>
       {/* Hero Section */}
-      <section className="text-center space-y-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-            Transform Your Ideas into Stunning Websites
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Effortlessly create beautiful, responsive websites with our AI-powered platform. 
-            No coding skills required.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" className="group">
-              Get Started
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Learn More
-            </Button>
+      <div className="container mx-auto px-4 py-16 lg:py-24">
+        <section className="text-center space-y-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+              Transform Your Ideas into Stunning Websites
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Effortlessly create beautiful, responsive websites with our AI-powered platform. 
+              No coding skills required.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Button size="lg" className="group">
+                Get Started
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Link to="/pricing">
+                <Button variant="outline" size="lg">
+                  View Pricing
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Features Section */}
-      <section className="mt-24 grid md:grid-cols-3 gap-8">
+      <section className="container mx-auto px-4 mt-24 grid md:grid-cols-3 gap-8">
         <Card className="p-6 text-center space-y-4 hover:shadow-lg transition-shadow">
           <div className="flex justify-center">
             <Rocket className="w-12 h-12 text-primary" />
@@ -65,8 +72,14 @@ const LandingPage = () => {
         </Card>
       </section>
 
+      {/* AI Features Section */}
+      <AIFeaturesSection />
+
+      {/* Testimonial Section */}
+      <TestimonialSection />
+
       {/* CTA Section */}
-      <section className="mt-24 bg-accent/10 rounded-xl p-12 text-center">
+      <section className="container mx-auto px-4 mt-24 bg-accent/10 rounded-xl p-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Ready to Build Your Dream Website?
         </h2>
