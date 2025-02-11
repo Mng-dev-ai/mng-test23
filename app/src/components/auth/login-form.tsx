@@ -30,7 +30,7 @@ export function LoginForm() {
     },
   })
 
-  const onSubmit = async (data: LoginFormData) => {
+  const onSubmit = async (LoginFormData) => {
     setIsLoading(true)
     try {
       // Simulated authentication - replace with actual API call

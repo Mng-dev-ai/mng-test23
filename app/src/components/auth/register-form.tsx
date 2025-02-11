@@ -32,7 +32,7 @@ export function RegisterForm() {
     },
   })
 
-  const onSubmit = async (data: RegisterFormData) => {
+  const onSubmit = async (RegisterFormData) => {
     setIsLoading(true)
     try {
       // Simulated registration - replace with actual API call
