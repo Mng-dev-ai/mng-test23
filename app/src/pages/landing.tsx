@@ -25,15 +25,17 @@ const LandingPage = () => {
               No coding skills required.
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" className="group">
-                Get Started
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="group" asChild>
+                <Link to="/register">
+                  Get Started
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Link to="/pricing">
-                <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/pricing">
                   View Pricing
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -87,9 +89,11 @@ const LandingPage = () => {
           Join thousands of creators who have transformed their online presence 
           with our AI-powered website builder.
         </p>
-        <Button size="lg" className="group">
-          Start Your Project
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+        <Button size="lg" className="group" asChild>
+          <Link to="/register">
+            Start Your Project
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </Button>
       </section>
     </div>

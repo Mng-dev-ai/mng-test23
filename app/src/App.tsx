@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ModeToggle } from "@/components/mode-toggle"
 import { Toaster } from "@/components/ui/toaster"
 import { ProtectedRoute } from "@/components/protected-route"
+import { Navbar } from "@/components/navbar"
 
 // Pages
 import LandingPage from "@/pages/landing"
@@ -13,9 +14,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-background">
-        <div className="fixed top-4 right-4 z-50">
-          <ModeToggle />
-        </div>
+        <Navbar />
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
@@ -27,6 +26,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             {/* Add protected routes here, e.g. dashboard */}
             <Route path="/dashboard" element={<div>Dashboard</div>} />
+            <Route path="/profile" element={<div>Profile</div>} />
           </Route>
         </Routes>
         <Toaster />
